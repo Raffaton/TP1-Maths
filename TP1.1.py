@@ -1,14 +1,28 @@
-from cmath import *
+from sympy import *
+from cmath import * 
 
 def ex1():
-    a1 = input("Pour la fonction z1, que vaut a : ")
-    b1 = input("Puis b (précisez si le nombre est positif ou négatif) : ")
+    z1 = 3 + 4j
+    z2 = 1 - 2j
 
-    a2 = input("Pour la fonction z2, que vaut a : ")
-    b2 = input("Puis b (précisez si le nombre est positif ou négatif) : ")
+    print(f"z1 = {z1}")
+    print(f"Partie réelle de z1 : {z1.real}")
+    print(f"Partie imaginaire de z1 : {z1.imag}\n")
 
-    print("Ainsi, z1 = {} {}j et z2 = {} {}j".format(a1, b1, a2, b2))
+    print(f"z2 = {z2}")
+    print(f"Partie réelle de z2 : {z2.real}")
+    print(f"Partie imaginaire de z2 : {z2.imag}\n")
 
+    module_z1 = abs(z1)
+    module_z2 = abs(z2)
 
-test = ex1()
-test2=ex2()
+    print(f"Module de z1 : {module_z1}")
+    print(f"Module de z2 : {module_z2}\n")
+
+    argument_z1 = phase(z1)
+    argument_z2 = phase(z2)
+
+    print(f"Argument de z1 : {argument_z1} ")
+    print(f"Argument de z2 : {argument_z2} ")
+
+ex1()
