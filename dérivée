@@ -1,0 +1,10 @@
+from sympy import *
+  from cmath import *
+
+x = symbols('x')
+expr1 = cos(sin(x))
+expr2 = tan(tan(x))
+  
+print(derivative_expr = Derivative(expr1, x))
+print(derivative_expr = Derivative(expr2, x))
+
