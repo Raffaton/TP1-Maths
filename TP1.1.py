@@ -1,10 +1,10 @@
 from sympy import *
 from cmath import * 
 
-def ex1():
-    z1 = 3 + 4j
-    z2 = 1 - 2j
+z1 = 3 + 4j
+z2 = 1 - 2j
 
+def ex1():
     print(f"z1 = {z1}")
     print(f"Partie réelle de z1 : {z1.real}")
     print(f"Partie imaginaire de z1 : {z1.imag}\n")
@@ -24,5 +24,12 @@ def ex1():
 
     print(f"Argument de z1 : {argument_z1} ")
     print(f"Argument de z2 : {argument_z2} ")
+
+
+def ex2():
+    print(z1+z2)
+    print(z1-z2)
+    print(z1*z2)
+    print(z1/z2)
 
 ex1()
