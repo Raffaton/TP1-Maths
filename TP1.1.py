@@ -31,5 +31,8 @@ def ex2():
     print(z1-z2)
     print(z1*z2)
     print(z1/z2)
+    print(z1^2)
+    print(z2^3)
 
 ex1()
+ex2()
