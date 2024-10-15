@@ -1,0 +1,48 @@
+from cmath import *
+from sympy import *
+import matplotlib.pyplot as plt
+
+def ex1():
+    module = 5  
+    angle = pi / 4 
+
+    z_polar = rect(module, angle)
+    print(f"Nombre complexe en polaire : 5 / (π/4)")
+    print(f"En représentation cartésienne : {z_polar}\n")
+
+    z1 = 3 + 4j  
+
+    module_z1 = abs(z1)  
+    argument_z1 = phase(z1)  
+
+    print(f"z1 = {z1} en cartésien")
+    print(f"Module de z1 : {module_z1}")
+    print(f"Argument de z1 : {argument_z1}")
+
+def ex2():
+    z1 = 3 + 4j
+    z2 = 1 - 2j
+    z_polar = rect(5, pi / 4)
+
+    plt.figure()
+
+    plt.plot([0, z1.real], [0, z1.imag], label = "z1 = 3 + 4j", marker = "o")
+    plt.plot([0, z2.real], [0, z2.imag], label = "z2 = 1 - 2j", marker = "o")
+    plt.plot([0, z_polar.real], [0, z_polar.imag], label = "z_polar = {}".format(z_polar), marker = "o")
+
+    plt.legend()
+
+    plt.title("Représentation de z1, z2 et z_polaire dans le plan coplexe")
+    plt.xlabel("Partie réelle")
+    plt.ylabel("Partie imaginaire")
+
+    plt.grid()
+
+    plt.axhline(0, color="black", linewidth = 0.5)
+    plt.axvline(0, color="black", linewidth = 0.5)
+    plt.gca().set_aspect("equal", adjustable="box")
+
+    plt.show() 
+
+ex1()
+ex2()
