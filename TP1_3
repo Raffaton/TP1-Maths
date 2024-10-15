@@ -1,0 +1,20 @@
+import cmath
+
+a = 1
+b = 1 - 2j
+c = 5
+
+discr = cmath.sqrt(b**2 - 4*a*c)
+
+z1 = (-b + discr) / (2*a)
+z2 = (-b - discr) / (2*a)
+
+print(f"Les solutions de l'equation quadratique sont:")
+print(f"z1 = {z1}")
+print(f"z2 = {z2}")
+
+check_z1 = z1**2 + (1 - 2j)*z1 + 5
+print(f"Verification pour z1: {check_z1}")
+
+check_z2 = z2**2 + (1 - 2j)*z2 + 5
+print(f"Verification pour z2: {check_z2}")
