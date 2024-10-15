@@ -1,0 +1,25 @@
+import cmath
+
+def racines_niemes(z, n):
+    """Calcule les racines n-ièmes d'un nombre complexe z."""
+
+    r = abs(z)
+    theta = cmath.phase(z)
+    
+    r_n = r**(1/n)
+    
+    racines = []
+    
+    for k in range(n):
+        angle = (theta + 2 * cmath.pi * k) / n
+        racine = r_n * (cmath.cos(angle) + cmath.sin(angle) * 1j)
+        racines.append(racine)
+    
+    return racines
+
+z = 1 + 1j  
+n = 3  
+racines = racines_niemes(z, n)
+
+for i, racine in enumerate(racines):
+    print(f"Racine {i+1}: {racine}")
