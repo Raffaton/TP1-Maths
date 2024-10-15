@@ -1,0 +1,9 @@
+def ex4():
+
+    coefficients = [1, 2, -1, 1]
+    racines = roots(coefficients)
+    print("Les racines de l'équation cubique sont :")
+    for root in racines:
+        print(root)
+
+ex4()
