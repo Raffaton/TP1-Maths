@@ -11,3 +11,4 @@ def ex1():
 
 
 test = ex1()
+test2=ex2()
